@@ -1,0 +1,37 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.0.5'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'moe.vergo'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// required for WebClient over RestTemplate, to use with the new HttpExchange declarative client
+	// if both spring-web and spring-webflux on classpath, app favours spring-web and starts up non reactive app: https://stackoverflow.com/a/57365926
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'org.springframework.boot:spring-boot-starter-cache'
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	implementation 'com.github.ben-manes.caffeine:caffeine'
+	implementation("com.google.guava:guava:31.1-jre")
+	implementation 'org.mapdb:mapdb:3.0.7'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
