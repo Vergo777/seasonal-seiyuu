@@ -1,6 +1,19 @@
-Feature: Generating summary for current season starting with seasonal slows from MyAnimeList
+Feature: Generating summary for current season starting with seasonal shows from MyAnimeList
 
-  Scenario: Test1
+  Scenario: Finding out which shows each voice actor (seiyuu in Japanese) is involved with in the given season works as follows:
+
+    - Using the seasonal anime port, fetch the full list of anime that belong to the "current" season
+
+    - Using the anime characters port, for each of these seasonal anime fetch the list of characters belonging to these shows
+
+    - Using the above information, we are able to narrow down on the IDs of specific seiyuus who have an invoolvement in the current season
+
+    - Using this set of specific seiyuus, fetch the full details of these seiyuus from the seiyuu port (eg. name, full set of voice acting roles etc)
+
+    - When producing the final summary, each seiyuu's roles in the current season is a subset of their overall roles, and is determined by filtering
+      against the IDs of anime that belong to the current season (from step 1)
+
+    - This gives us the desired summary of seiyuus and their roles in the current season, and also a reference for the all time roles that they have voiced
 
     Given the following seasonal anime fetched from the seasonal anime port
       | id | title             | url  |
