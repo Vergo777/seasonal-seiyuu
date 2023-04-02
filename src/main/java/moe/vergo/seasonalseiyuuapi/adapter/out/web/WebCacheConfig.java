@@ -1,6 +1,8 @@
 package moe.vergo.seasonalseiyuuapi.adapter.out.web;
 
 import com.github.benmanes.caffeine.cache.Caffeine;
+import org.mapdb.DB;
+import org.mapdb.DBMaker;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.caffeine.CaffeineCacheManager;
@@ -22,5 +24,11 @@ public class WebCacheConfig {
         CaffeineCacheManager caffeineCacheManager = new CaffeineCacheManager();
         caffeineCacheManager.setCaffeine(caffeine);
         return caffeineCacheManager;
+    }
+
+    @Bean
+    public DB createCacheDB() {
+        DB db = DBMaker.fileDB("./tmp/cache.db").closeOnJvmShutdown().checksumHeaderBypass().make();
+        return db;
     }
 }

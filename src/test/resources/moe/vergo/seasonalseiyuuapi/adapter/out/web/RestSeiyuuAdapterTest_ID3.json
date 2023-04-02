@@ -1,0 +1,55 @@
+{
+  "data": {
+    "mal_id": 3,
+    "url": "https:\/\/myanimelist.net\/people\/64393\/Haruka_Aikawa",
+    "website_url": null,
+    "images": {
+      "jpg": {
+        "image_url": "https:\/\/cdn.myanimelist.net\/images\/voiceactors\/3\/74098.jpg"
+      }
+    },
+    "name": "Haruka Aikawa",
+    "alternate_names": [],
+    "birthday": null,
+    "favorites": 0,
+    "about": null,
+    "anime": [],
+    "manga": [],
+    "voices": [
+      {
+        "role": "Supporting",
+        "anime": {
+          "mal_id": 52081,
+          "url": "https:\/\/myanimelist.net\/anime\/52081\/Edomae_Elf",
+          "images": {
+            "jpg": {
+              "image_url": "https:\/\/cdn.myanimelist.net\/images\/anime\/1171\/133777.jpg?s=28607ee7eec624538cc1634c7ff39c65",
+              "small_image_url": "https:\/\/cdn.myanimelist.net\/images\/anime\/1171\/133777t.jpg?s=28607ee7eec624538cc1634c7ff39c65",
+              "large_image_url": "https:\/\/cdn.myanimelist.net\/images\/anime\/1171\/133777l.jpg?s=28607ee7eec624538cc1634c7ff39c65"
+            },
+            "webp": {
+              "image_url": "https:\/\/cdn.myanimelist.net\/images\/anime\/1171\/133777.webp?s=28607ee7eec624538cc1634c7ff39c65",
+              "small_image_url": "https:\/\/cdn.myanimelist.net\/images\/anime\/1171\/133777t.webp?s=28607ee7eec624538cc1634c7ff39c65",
+              "large_image_url": "https:\/\/cdn.myanimelist.net\/images\/anime\/1171\/133777l.webp?s=28607ee7eec624538cc1634c7ff39c65"
+            }
+          },
+          "title": "Edomae Elf"
+        },
+        "character": {
+          "mal_id": 225458,
+          "url": "https:\/\/myanimelist.net\/character\/225458\/Koma_Sakuraba",
+          "images": {
+            "jpg": {
+              "image_url": "https:\/\/cdn.myanimelist.net\/r\/84x124\/images\/characters\/16\/504208.jpg?s=d8eec3ccad52727de65fba436340c3a2"
+            },
+            "webp": {
+              "image_url": "https:\/\/cdn.myanimelist.net\/r\/84x124\/images\/characters\/16\/504208.webp?s=d8eec3ccad52727de65fba436340c3a2",
+              "small_image_url": "https:\/\/cdn.myanimelist.net\/r\/84x124\/images\/characters\/16\/504208t.webp?s=d8eec3ccad52727de65fba436340c3a2"
+            }
+          },
+          "name": "Sakuraba, Koma"
+        }
+      }
+    ]
+  }
+}

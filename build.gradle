@@ -38,6 +38,10 @@ dependencies {
 	testImplementation("org.junit.platform:junit-platform-launcher")
 
 	testImplementation("org.assertj:assertj-core")
+
+	// mockserver deps
+	testImplementation 'org.mock-server:mockserver-client-java:5.15.0'
+	testImplementation 'org.mock-server:mockserver-netty:5.15.0'
 }
 
 tasks.named('test') {

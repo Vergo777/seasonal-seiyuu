@@ -170,9 +170,9 @@ public class GenerateCurrentSeasonSummarySteps {
                 ))
                 .collect(Collectors.toList());
 
-        assertThat(expectedResult)
+        assertThat(actualResult)
                 .usingRecursiveFieldByFieldElementComparator()
-                .containsExactlyInAnyOrderElementsOf(actualResult);
+                .containsExactlyInAnyOrderElementsOf(expectedResult);
     }
 
     private RolesDto toRolesDto(RolesDtoForCucumber rolesDtoForCucumber) {
