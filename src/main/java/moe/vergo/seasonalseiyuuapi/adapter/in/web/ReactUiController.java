@@ -1,7 +1,6 @@
 package moe.vergo.seasonalseiyuuapi.adapter.in.web;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import com.google.common.collect.MoreCollectors;
 import moe.vergo.seasonalseiyuuapi.adapter.in.web.dto.CurrentSeasonSummaryItemDto;
 import moe.vergo.seasonalseiyuuapi.adapter.in.web.dto.Views;
 import moe.vergo.seasonalseiyuuapi.application.port.in.GenerateCurrentSeasonSummaryUseCase;
@@ -30,7 +29,7 @@ public class ReactUiController {
     @GetMapping("/currentSeasonSummary")
     @JsonView(Views.Simple.class)
     public List<CurrentSeasonSummaryItemDto> currentSeasonSummary(){
-        return generateCurrentSeasonSummaryUseCase.generateCurrentSeasonSummary(CURRENT_YEAR, CURRENT_SEASON);
+        return generateCurrentSeasonSummaryUseCase.generateCurrentSeasonSummary(CURRENT_YEAR, CURRENT_SEASON, true);
     }
 
     @GetMapping("/seiyuuDetails/{id}")

@@ -2,9 +2,9 @@ package moe.vergo.seasonalseiyuuapi.adapter.out.web;
 
 import com.google.common.util.concurrent.RateLimiter;
 import moe.vergo.seasonalseiyuuapi.adapter.out.web.dto.SeiyuuDataWrapperDto;
-import moe.vergo.seasonalseiyuuapi.adapter.out.web.dto.SeiyuuResponseDto;
 import moe.vergo.seasonalseiyuuapi.adapter.out.web.dto.SeiyuuVoicesDto;
 import moe.vergo.seasonalseiyuuapi.adapter.out.web.httpinterface.SeiyuuClient;
+import moe.vergo.seasonalseiyuuapi.application.exception.GetSeiyuuDetailsException;
 import moe.vergo.seasonalseiyuuapi.application.port.out.SeiyuuPort;
 import moe.vergo.seasonalseiyuuapi.domain.Role;
 import moe.vergo.seasonalseiyuuapi.domain.Seiyuu;
@@ -59,7 +59,7 @@ public class RestSeiyuuAdapter implements SeiyuuPort {
             }
         }
 
-        throw new RuntimeException("Failed to fetch details from endpoint for seiyuu ID " + seiyuuId);
+        throw new GetSeiyuuDetailsException("Failed to fetch details from endpoint for seiyuu ID " + seiyuuId);
     }
 
     private Role toDomainRole(SeiyuuVoicesDto seiyuuVoicesDto) {

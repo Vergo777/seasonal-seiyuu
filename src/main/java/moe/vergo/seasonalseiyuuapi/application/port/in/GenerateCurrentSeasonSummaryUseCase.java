@@ -6,5 +6,5 @@ import moe.vergo.seasonalseiyuuapi.domain.Season;
 import java.util.List;
 
 public interface GenerateCurrentSeasonSummaryUseCase {
-    List<CurrentSeasonSummaryItemDto> generateCurrentSeasonSummary(int year, Season season);
+    List<CurrentSeasonSummaryItemDto> generateCurrentSeasonSummary(int year, Season season, boolean useCachedDbValueIfAvailable);
 }

@@ -30,6 +30,14 @@ dependencies {
 	implementation 'com.github.ben-manes.caffeine:caffeine'
 	implementation("com.google.guava:guava:31.1-jre")
 	implementation 'org.mapdb:mapdb:3.0.7'
+
+	// cucumber deps
+	testImplementation("io.cucumber:cucumber-java:6.0.0")
+	testImplementation("io.cucumber:cucumber-junit-platform-engine:6.0.0")
+	testImplementation("io.cucumber:cucumber-spring:6.0.0")
+	testImplementation("org.junit.platform:junit-platform-launcher")
+
+	testImplementation("org.assertj:assertj-core")
 }
 
 tasks.named('test') {

@@ -15,7 +15,7 @@ public class GenerateSeiyuuDetailsService implements GenerateSeiyuuDetailsUseCas
 
     @Override
     public CurrentSeasonSummaryItemDto generateSeiyuuDetails(int seiyuuId, int year, Season season) {
-        return generateCurrentSeasonSummaryUseCase.generateCurrentSeasonSummary(year, season).stream()
+        return generateCurrentSeasonSummaryUseCase.generateCurrentSeasonSummary(year, season, true).stream()
                 .filter(item -> item.getId() == seiyuuId)
                 .collect(MoreCollectors.onlyElement());
     }

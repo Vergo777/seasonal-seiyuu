@@ -52,4 +52,14 @@ public class RolesDto implements Serializable {
     public void setSeriesID(int seriesID) {
         this.seriesID = seriesID;
     }
+
+    @Override
+    public String toString() {
+        return "RolesDto{" +
+                "characterName='" + characterName + '\'' +
+                ", characterThumbnail='" + characterThumbnail + '\'' +
+                ", seriesName='" + seriesName + '\'' +
+                ", seriesID=" + seriesID +
+                '}';
+    }
 }

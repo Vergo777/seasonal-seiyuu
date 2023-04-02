@@ -36,11 +36,10 @@ public class GenerateCurrentSeasonSummaryService implements GenerateCurrentSeaso
     }
 
     @Override
-    // @Cacheable("currentSeasonSummaryCache")
-    public List<CurrentSeasonSummaryItemDto> generateCurrentSeasonSummary(int year, Season season) {
+    public List<CurrentSeasonSummaryItemDto> generateCurrentSeasonSummary(int year, Season season, boolean useDbCachedValueIfAvailable) {
         CacheService<List<CurrentSeasonSummaryItemDto>> cacheService = seasonSummaryCacheManager.initialiseCache("seasonSummaryCache");
 
-        if (cacheService.isPresentInCache(CURRENT_SEASON_DB_CACHE_KEY)) {
+        if (cacheService.isPresentInCache(CURRENT_SEASON_DB_CACHE_KEY) && useDbCachedValueIfAvailable) {
             return cacheService.getValueFromCache(CURRENT_SEASON_DB_CACHE_KEY);
         }
 

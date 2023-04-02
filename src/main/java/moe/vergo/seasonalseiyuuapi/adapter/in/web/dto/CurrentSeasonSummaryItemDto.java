@@ -64,4 +64,15 @@ public class CurrentSeasonSummaryItemDto implements Serializable {
     public void setOverallRolesArray(List<RolesDto> overallRolesArray) {
         this.overallRolesArray = overallRolesArray;
     }
+
+    @Override
+    public String toString() {
+        return "CurrentSeasonSummaryItemDto{" +
+                "name='" + name + '\'' +
+                ", image='" + image + '\'' +
+                ", id=" + id +
+                ", currentSeasonRolesArray=" + currentSeasonRolesArray +
+                ", overallRolesArray=" + overallRolesArray +
+                '}';
+    }
 }
