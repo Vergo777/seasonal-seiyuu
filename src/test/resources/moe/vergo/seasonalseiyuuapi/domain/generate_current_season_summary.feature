@@ -6,7 +6,7 @@ Feature: Generating summary for current season starting with seasonal shows from
 
     - Using the anime characters port, for each of these seasonal anime fetch the list of characters belonging to these shows
 
-    - Using the above information, we are able to narrow down on the IDs of specific seiyuus who have an invoolvement in the current season
+    - Using the above information, we are able to narrow down on the IDs of specific seiyuus who have an involvement in the current season
 
     - Using this set of specific seiyuus, fetch the full details of these seiyuus from the seiyuu port (eg. name, full set of voice acting roles etc)
 
