@@ -26,7 +26,7 @@ This project is built using Spring Boot 3.0 and Java 17, and can be imported int
 
 ## Interesting features/challenges
 
-- Spring Boot 3/Spring 6 brings with it [HTTP Interfaces](docs.spring.io/spring-framework/docs/current/reference/html/integration.html#rest-http-interface) - now allowing us to define an HTTP service as a Java interface with annotated methods for HTTP exchanges. Compared to the previous way of doing this with `RestTemplate` or `WebClient`, this massively cuts down on boilerplate code for simple REST client usages.
+- Spring Boot 3/Spring 6 brings with it [HTTP Interfaces](https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#rest-http-interface) - now allowing us to define an HTTP service as a Java interface with annotated methods for HTTP exchanges. Compared to the previous way of doing this with `RestTemplate` or `WebClient`, this massively cuts down on boilerplate code for simple REST client usages.
 - JDK 14 introduced [Records](https://docs.oracle.com/en/java/javase/14/language/records.html), which are a new kind of type declaration and ideal for use as "plain data carriers"
   - These are used liberally throughout the project, and leads to significantly more succinct and cleaner code. [See usage here](https://github.com/Vergo777/seasonal-seiyuu/blob/master/src/test/java/moe/vergo/seasonalseiyuuapi/domain/GenerateCurrentSeasonSummarySteps.java#L187) as an example
 - Jikan's [seasons API endpoint](https://docs.api.jikan.moe/#tag/seasons) uses the concept of "pagination", where instead of returning all shows for a given season in a single API call, it instead splits these up between multiple "pages" and any individual call provides only a subset of the overall results
